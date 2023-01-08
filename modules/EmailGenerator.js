@@ -33,7 +33,7 @@ class EmailGenerator {
             City: ${options.city}
             Postal: ${options.postal}
             Query Type: ${QueryTypes[options.queryType]}
-            ${options.queryType === 3 ? options.payRate + "" : ''}
+            ${options.queryType === 3 ? "Payrate " + options.payRate : ''}
             **********************
             Message: ${options.message.trim()}
             **********************
