@@ -1,7 +1,8 @@
 const express = require('express');
+const email = require('./modules/EmailGenerator');
 const app = express();
+const path = require('path');
 
-const nodemailer = require('nodemailer');
 const PORT = process.env.PORT || 8080;
 
 /**
@@ -22,12 +23,16 @@ app.get("/", (req, res) => {
 });
 
 app.post("/", (req, res) => {
-    res.json(req.body);
+    email.sendEmail(req.body);
+    res.sendFile(
+        path.join(__dirname, 'views/success-page.html')
+    );
 });
 
 /**
  * Initialize Api
  */
-app.listen(PORT, () => {
+app.listen(PORT, 
+    () => {
         console.log("Listening on port " + PORT);
     });

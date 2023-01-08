@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Response Page</title>
+    <style>
+        body {
+            font-size: 5rem;
+            font-weight: 1000;
+            font-family: monospace;
+            min-height: 100vw
+        }
+
+        main {
+            height: 100%;
+            background-color: rgb(204, 211, 218);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        p {
+            text-align: center;
+        }
+    </style>
+    <script defer>
+        window.onload = () => {
+            document.getElementById('goBack').onclick = (evt) => {
+                console.log("Here")
+                window.history.back();
+            }
+        }
+    </script>
+</head>
+<body>
+    <main>
+        <p>
+            Your Message was sent successfully!
+        </p>
+        <a href="javascript:void(0)" id="goBack">Go Back</a>
+    </main>
+</body>
+</html>
