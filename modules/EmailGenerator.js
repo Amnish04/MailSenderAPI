@@ -34,9 +34,9 @@ class EmailGenerator {
             Postal: ${options.postal}
             Query Type: ${QueryTypes[options.queryType]}
             ${options.queryType === 3 ? options.payRate + "" : ''}
-            *****************************************************************
+            **********************
             Message: ${options.message.trim()}
-            *****************************************************************
+            **********************
             Feedback: ${options.feedback}
         `;
     }
